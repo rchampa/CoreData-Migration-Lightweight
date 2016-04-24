@@ -11,5 +11,11 @@
 @implementation Nota
 
 // Insert code here to add functionality to your managed object subclass
++(id)personaWithContext:(NSManagedObjectContext *)context {
+    Nota *nota = [NSEntityDescription
+                        insertNewObjectForEntityForName:@"Nota"
+                        inManagedObjectContext:context];
+    return nota;
+}
 
 @end

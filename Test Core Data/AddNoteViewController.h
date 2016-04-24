@@ -9,5 +9,8 @@
 #import "ViewController.h"
 
 @interface AddNoteViewController : ViewController
+@property (weak, nonatomic) IBOutlet UITextField *tf_titulo;
+@property (weak, nonatomic) IBOutlet UITextField *tf_mensaje;
+- (IBAction)guardarNota:(id)sender;
 
 @end

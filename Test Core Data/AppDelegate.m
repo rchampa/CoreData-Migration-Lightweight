@@ -15,6 +15,11 @@
 @implementation AppDelegate
 
 
++(AppDelegate *)instance
+{
+    return (AppDelegate*)[[UIApplication sharedApplication] delegate];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     return YES;
@@ -122,6 +127,49 @@
             abort();
         }
     }
+}
+
++(NSArray*) getNotas {
+    
+    AppDelegate* delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    NSManagedObjectContext* context = delegate.managedObjectContext;
+    
+    NSError *error;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [fetchRequest setReturnsObjectsAsFaults:NO];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Nota" inManagedObjectContext:context];
+    
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    
+    return fetchedObjects;
+}
++(void) deleteAllObjects:(NSString *) entityDescription {
+    
+    AppDelegate* delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    NSManagedObjectContext* context = delegate.managedObjectContext;
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityDescription
+                                              inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    
+    NSError *error;
+    NSArray *items = [context executeFetchRequest:fetchRequest error:&error];
+    
+    if(items != nil) {
+        for (NSManagedObject *managedObject in items) {
+            if(managedObject != nil)
+                [context deleteObject:managedObject];
+        }
+        
+        NSLog(@"Deleted %d %@ item(s)", (int)items.count, entityDescription);
+        
+        if (![context save:&error]) {
+            NSLog(@"Error deleting %@ - error:%@",entityDescription,error);
+        }
+    }
+    
 }
 
 @end

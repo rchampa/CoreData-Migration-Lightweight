@@ -7,21 +7,55 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
+#import "Nota.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+{
+    NSArray *tableData;
+}
+
+@synthesize tableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    tableData = [AppDelegate getNotas];
+    [tableView reloadData];
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [tableData count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    Nota* nota = [tableData objectAtIndex:indexPath.row];
+    cell.textLabel.text = nota.mensaje;
+    return cell;
+}
+
+
+- (IBAction)unwindToTable:(UIStoryboardSegue *)unwindSegue
+{
 }
 
 @end

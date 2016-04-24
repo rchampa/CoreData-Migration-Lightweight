@@ -6,32 +6,33 @@
 //  Copyright © 2016 Clickmobile. All rights reserved.
 //
 
+#import "AppDelegate.h"
 #import "AddNoteViewController.h"
+#import <CoreData/CoreData.h>
+#import "Nota.h"
+
 
 @interface AddNoteViewController ()
 
 @end
 
 @implementation AddNoteViewController
+@synthesize tf_titulo;
+@synthesize tf_mensaje;
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+- (IBAction)guardarNota:(id)sender {
+    
+
+    AppDelegate* delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext* context = delegate.managedObjectContext;
+    
+    Nota *nota = [Nota personaWithContext:context];
+    nota.mensaje = tf_mensaje.text;
+    [delegate saveContext];
+
+    [self.navigationController popViewControllerAnimated:YES];
+
+    
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

@@ -14,6 +14,9 @@
 		8CEEA1CD1CCC0102003A2ADF /* Test_Core_Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEA1CB1CCC0102003A2ADF /* Test_Core_Data.xcdatamodeld */; };
 		8CEEA1CF1CCC0102003A2ADF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CEEA1CE1CCC0102003A2ADF /* Assets.xcassets */; };
 		8CEEA1D21CCC0102003A2ADF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CEEA1D01CCC0102003A2ADF /* LaunchScreen.storyboard */; };
+		8CEEA1DE1CCC07D7003A2ADF /* Nota.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEA1DC1CCC07D7003A2ADF /* Nota.m */; settings = {ASSET_TAGS = (); }; };
+		8CEEA1E21CCC23F1003A2ADF /* AddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEA1E11CCC23F1003A2ADF /* AddNoteViewController.m */; settings = {ASSET_TAGS = (); }; };
+		8CEEA1E81CCD28D4003A2ADF /* Nota+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEA1E71CCD28D4003A2ADF /* Nota+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,12 @@
 		8CEEA1CE1CCC0102003A2ADF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CEEA1D11CCC0102003A2ADF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CEEA1D31CCC0102003A2ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CEEA1DB1CCC07D7003A2ADF /* Nota.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Nota.h; path = "Test Core Data/models/Nota.h"; sourceTree = "<group>"; };
+		8CEEA1DC1CCC07D7003A2ADF /* Nota.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Nota.m; path = "Test Core Data/models/Nota.m"; sourceTree = "<group>"; };
+		8CEEA1E01CCC23F1003A2ADF /* AddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteViewController.h; sourceTree = "<group>"; };
+		8CEEA1E11CCC23F1003A2ADF /* AddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteViewController.m; sourceTree = "<group>"; };
+		8CEEA1E61CCD28D4003A2ADF /* Nota+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Nota+CoreDataProperties.h"; path = "Test Core Data/models/Nota+CoreDataProperties.h"; sourceTree = "<group>"; };
+		8CEEA1E71CCD28D4003A2ADF /* Nota+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Nota+CoreDataProperties.m"; path = "Test Core Data/models/Nota+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +53,7 @@
 		8CEEA1B31CCC0102003A2ADF = {
 			isa = PBXGroup;
 			children = (
+				8CEEA1DF1CCC07E5003A2ADF /* model */,
 				8CEEA1BE1CCC0102003A2ADF /* Test Core Data */,
 				8CEEA1BD1CCC0102003A2ADF /* Products */,
 			);
@@ -64,6 +74,8 @@
 				8CEEA1C31CCC0102003A2ADF /* AppDelegate.m */,
 				8CEEA1C51CCC0102003A2ADF /* ViewController.h */,
 				8CEEA1C61CCC0102003A2ADF /* ViewController.m */,
+				8CEEA1E01CCC23F1003A2ADF /* AddNoteViewController.h */,
+				8CEEA1E11CCC23F1003A2ADF /* AddNoteViewController.m */,
 				8CEEA1C81CCC0102003A2ADF /* Main.storyboard */,
 				8CEEA1CE1CCC0102003A2ADF /* Assets.xcassets */,
 				8CEEA1D01CCC0102003A2ADF /* LaunchScreen.storyboard */,
@@ -80,6 +92,17 @@
 				8CEEA1C01CCC0102003A2ADF /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8CEEA1DF1CCC07E5003A2ADF /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8CEEA1E61CCD28D4003A2ADF /* Nota+CoreDataProperties.h */,
+				8CEEA1E71CCD28D4003A2ADF /* Nota+CoreDataProperties.m */,
+				8CEEA1DB1CCC07D7003A2ADF /* Nota.h */,
+				8CEEA1DC1CCC07D7003A2ADF /* Nota.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +176,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CEEA1CD1CCC0102003A2ADF /* Test_Core_Data.xcdatamodeld in Sources */,
+				8CEEA1E21CCC23F1003A2ADF /* AddNoteViewController.m in Sources */,
+				8CEEA1DE1CCC07D7003A2ADF /* Nota.m in Sources */,
+				8CEEA1E81CCD28D4003A2ADF /* Nota+CoreDataProperties.m in Sources */,
 				8CEEA1C71CCC0102003A2ADF /* ViewController.m in Sources */,
 				8CEEA1C41CCC0102003A2ADF /* AppDelegate.m in Sources */,
 				8CEEA1C11CCC0102003A2ADF /* main.m in Sources */,
