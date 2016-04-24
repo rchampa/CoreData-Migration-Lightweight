@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Nota (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSString *mensaje;
+@property (nullable, nonatomic, retain) NSString *titulo;
 
 @end
 

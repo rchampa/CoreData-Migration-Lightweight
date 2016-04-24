@@ -28,6 +28,7 @@
     NSManagedObjectContext* context = delegate.managedObjectContext;
     
     Nota *nota = [Nota personaWithContext:context];
+    nota.titulo = tf_titulo.text;
     nota.mensaje = tf_mensaje.text;
     [delegate saveContext];
 

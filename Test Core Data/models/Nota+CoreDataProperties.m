@@ -14,5 +14,6 @@
 @implementation Nota (CoreDataProperties)
 
 @dynamic mensaje;
+@dynamic titulo;
 
 @end

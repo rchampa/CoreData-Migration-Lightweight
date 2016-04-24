@@ -16,7 +16,7 @@
 		8CEEA1D21CCC0102003A2ADF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CEEA1D01CCC0102003A2ADF /* LaunchScreen.storyboard */; };
 		8CEEA1DE1CCC07D7003A2ADF /* Nota.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEA1DC1CCC07D7003A2ADF /* Nota.m */; settings = {ASSET_TAGS = (); }; };
 		8CEEA1E21CCC23F1003A2ADF /* AddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEA1E11CCC23F1003A2ADF /* AddNoteViewController.m */; settings = {ASSET_TAGS = (); }; };
-		8CEEA1E81CCD28D4003A2ADF /* Nota+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEA1E71CCD28D4003A2ADF /* Nota+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		8CEEA1EF1CCD3322003A2ADF /* Nota+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEA1EE1CCD3322003A2ADF /* Nota+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +35,9 @@
 		8CEEA1DC1CCC07D7003A2ADF /* Nota.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Nota.m; path = "Test Core Data/models/Nota.m"; sourceTree = "<group>"; };
 		8CEEA1E01CCC23F1003A2ADF /* AddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteViewController.h; sourceTree = "<group>"; };
 		8CEEA1E11CCC23F1003A2ADF /* AddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteViewController.m; sourceTree = "<group>"; };
-		8CEEA1E61CCD28D4003A2ADF /* Nota+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Nota+CoreDataProperties.h"; path = "Test Core Data/models/Nota+CoreDataProperties.h"; sourceTree = "<group>"; };
-		8CEEA1E71CCD28D4003A2ADF /* Nota+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Nota+CoreDataProperties.m"; path = "Test Core Data/models/Nota+CoreDataProperties.m"; sourceTree = "<group>"; };
+		8CEEA1E91CCD30F4003A2ADF /* Test_Core_Data 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Test_Core_Data 2.xcdatamodel"; sourceTree = "<group>"; };
+		8CEEA1ED1CCD3322003A2ADF /* Nota+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Nota+CoreDataProperties.h"; path = "Test Core Data/models/Nota+CoreDataProperties.h"; sourceTree = "<group>"; };
+		8CEEA1EE1CCD3322003A2ADF /* Nota+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Nota+CoreDataProperties.m"; path = "Test Core Data/models/Nota+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +98,8 @@
 		8CEEA1DF1CCC07E5003A2ADF /* model */ = {
 			isa = PBXGroup;
 			children = (
-				8CEEA1E61CCD28D4003A2ADF /* Nota+CoreDataProperties.h */,
-				8CEEA1E71CCD28D4003A2ADF /* Nota+CoreDataProperties.m */,
+				8CEEA1ED1CCD3322003A2ADF /* Nota+CoreDataProperties.h */,
+				8CEEA1EE1CCD3322003A2ADF /* Nota+CoreDataProperties.m */,
 				8CEEA1DB1CCC07D7003A2ADF /* Nota.h */,
 				8CEEA1DC1CCC07D7003A2ADF /* Nota.m */,
 			);
@@ -178,7 +179,7 @@
 				8CEEA1CD1CCC0102003A2ADF /* Test_Core_Data.xcdatamodeld in Sources */,
 				8CEEA1E21CCC23F1003A2ADF /* AddNoteViewController.m in Sources */,
 				8CEEA1DE1CCC07D7003A2ADF /* Nota.m in Sources */,
-				8CEEA1E81CCD28D4003A2ADF /* Nota+CoreDataProperties.m in Sources */,
+				8CEEA1EF1CCD3322003A2ADF /* Nota+CoreDataProperties.m in Sources */,
 				8CEEA1C71CCC0102003A2ADF /* ViewController.m in Sources */,
 				8CEEA1C41CCC0102003A2ADF /* AppDelegate.m in Sources */,
 				8CEEA1C11CCC0102003A2ADF /* main.m in Sources */,
@@ -337,9 +338,10 @@
 		8CEEA1CB1CCC0102003A2ADF /* Test_Core_Data.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				8CEEA1E91CCD30F4003A2ADF /* Test_Core_Data 2.xcdatamodel */,
 				8CEEA1CC1CCC0102003A2ADF /* Test_Core_Data.xcdatamodel */,
 			);
-			currentVersion = 8CEEA1CC1CCC0102003A2ADF /* Test_Core_Data.xcdatamodel */;
+			currentVersion = 8CEEA1E91CCD30F4003A2ADF /* Test_Core_Data 2.xcdatamodel */;
 			path = Test_Core_Data.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

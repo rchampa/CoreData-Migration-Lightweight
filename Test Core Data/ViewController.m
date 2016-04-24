@@ -49,7 +49,8 @@
     }
     
     Nota* nota = [tableData objectAtIndex:indexPath.row];
-    cell.textLabel.text = nota.mensaje;
+    NSString* texto_fila = [NSString stringWithFormat:@"%@: %@", nota.titulo, nota.mensaje];
+    cell.textLabel.text = texto_fila;
     return cell;
 }
 

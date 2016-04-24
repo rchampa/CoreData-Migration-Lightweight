@@ -76,13 +76,25 @@
         return _persistentStoreCoordinator;
     }
     
+    //Migration
+    NSDictionary *options = @{
+                              NSMigratePersistentStoresAutomaticallyOption  :@YES,
+                              NSInferMappingModelAutomaticallyOption        :@YES
+                              };
+    
+    
     // Create the coordinator and store
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Test_Core_Data.sqlite"];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
+                                                   configuration:nil
+                                                             URL:storeURL
+                                                        //options:nil
+                                                         options:options//automatic migration
+                                                           error:&error]) {
         // Report any error we got.
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";
